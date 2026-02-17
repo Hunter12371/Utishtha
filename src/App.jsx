@@ -3,9 +3,10 @@ import { AnimatePresence, motion } from 'framer-motion';
 import LandingPage from './components/layout/LandingPage';
 import DriverApp from './components/mobile/DriverApp';
 import DispatcherConsole from './components/admin/DispatcherConsole';
+import BackendTest from './components/common/BackendTest';
 
 function App() {
-  const [view, setView] = useState('landing'); // landing, patient, admin
+  const [view, setView] = useState('landing'); // landing, patient, admin, test
 
   return (
     <div className="min-h-screen bg-slate-950 font-sans text-white">
@@ -52,6 +53,24 @@ function App() {
               className="fixed bottom-4 left-4 z-50 text-xs text-slate-500 hover:text-white bg-black/50 px-2 py-1 rounded"
             >
               ← Exit Console
+            </button>
+          </motion.div>
+        )}
+
+        {view === 'test' && (
+          <motion.div
+            key="test"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="absolute inset-0"
+          >
+            <BackendTest />
+            <button
+              onClick={() => setView('landing')}
+              className="fixed top-4 left-4 z-50 text-xs text-slate-500 hover:text-white bg-black/50 px-2 py-1 rounded"
+            >
+              ← Back
             </button>
           </motion.div>
         )}

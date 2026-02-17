@@ -57,6 +57,17 @@ const LandingPage = ({ onSelect }) => {
                         <p className="text-slate-400 text-sm">Admin Dashboard Interface</p>
                     </motion.button>
                 </div>
+
+                {/* Backend Test Button */}
+                <motion.button
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.5 }}
+                    onClick={() => onSelect('test')}
+                    className="mt-8 px-6 py-3 bg-green-600/20 border border-green-500/30 rounded-lg text-green-400 hover:bg-green-600/30 transition-all text-sm"
+                >
+                    🔌 Backend Integration Test
+                </motion.button>
             </div>
         </div>
     );
