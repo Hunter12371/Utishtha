@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd mats-ambulance-system && npm install && npm run build",
+  "outputDirectory": "mats-ambulance-system/dist",
+  "installCommand": "cd mats-ambulance-system && npm install",
+  "framework": "vite"
+}
