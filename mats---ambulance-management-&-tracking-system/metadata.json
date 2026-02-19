@@ -1,0 +1,8 @@
+
+{
+  "name": "MATS - Ambulance Management & Tracking System",
+  "description": "A centralized dispatch and tracking system for emergency services, featuring real-time ambulance monitoring, AI-powered dispatch suggestions, and a mobile-friendly driver interface.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
